@@ -219,6 +219,14 @@ app.Run();
 //// **************************************************
 
 //// **************************************************
+//builder.Services.AddSingleton
+//	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_2>();
+
+////builder.Services.AddSingleton
+////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_2));
+//// **************************************************
+
+//// **************************************************
 ////builder.Services.AddScoped
 ////	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_1>();
 
