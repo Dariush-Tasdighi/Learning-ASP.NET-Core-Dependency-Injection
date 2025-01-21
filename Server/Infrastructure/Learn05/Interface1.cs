@@ -1,7 +1,6 @@
-﻿namespace Infrastructure.Learn05
+﻿namespace Infrastructure.Learn05;
+
+public interface Interface1
 {
-	public interface Interface1
-	{
-		int MyValue { get; set; }
-	}
+	int MyValue { get; set; }
 }

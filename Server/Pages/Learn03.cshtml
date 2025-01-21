@@ -7,6 +7,13 @@
 
 <hr />
 
+@*
+@if (Model.MyClass1 is not null)
+{
+	@(Model.MyClass1.MyValue)
+}
+*@
+
 MyValue: @(Model.MyClass1?.MyValue)
 
 <hr />
