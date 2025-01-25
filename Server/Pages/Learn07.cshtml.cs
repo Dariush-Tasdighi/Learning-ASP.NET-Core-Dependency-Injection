@@ -1,18 +1,19 @@
-namespace Server.Pages
+using Infrastructure.Learn07;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace Server.Pages;
+
+public class Learn07Model : PageModel
 {
-	public class Learn07Model :
-		Microsoft.AspNetCore.Mvc.RazorPages.PageModel
+	public Learn07Model(ILog logger) : base()
 	{
-		public Learn07Model(Infrastructure.Learn07.ILog logger) : base()
-		{
-			Logger = logger;
-		}
+		Logger = logger;
+	}
 
-		public Infrastructure.Learn07.ILog Logger { get; }
+	public ILog Logger { get; init; }
 
-		public void OnGet()
-		{
-			Logger.Log(message: "User came to 'Learn07'!");
-		}
+	public void OnGet()
+	{
+		Logger.Log(message: "User came to 'Learn07'!");
 	}
 }

@@ -1,7 +1,6 @@
-﻿namespace Infrastructure.Learn07
+﻿namespace Infrastructure.Learn07;
+
+public interface ILog
 {
-	public interface ILog
-	{
-		void Log(string message);
-	}
+	void Log(string message);
 }

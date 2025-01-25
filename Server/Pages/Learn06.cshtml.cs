@@ -1,18 +1,18 @@
-namespace Server.Pages
+using Infrastructure.Learn06;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+
+namespace Server.Pages;
+
+public class Learn06Model : PageModel
 {
-	public class Learn06Model :
-		Microsoft.AspNetCore.Mvc.RazorPages.PageModel
+	public Learn06Model(Interface2 interface2) : base()
 	{
-		public Learn06Model
-			(Infrastructure.Learn06.Interface2 interface2) : base()
-		{
-			Interface2 = interface2;
-		}
+		Interface2 = interface2;
+	}
 
-		public Infrastructure.Learn06.Interface2 Interface2 { get; }
+	public Interface2 Interface2 { get; init; }
 
-		public void OnGet()
-		{
-		}
+	public void OnGet()
+	{
 	}
 }

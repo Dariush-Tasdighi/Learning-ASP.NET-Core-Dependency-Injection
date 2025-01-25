@@ -228,28 +228,22 @@ app.Run();
 // **************************************************
 // Learn 06
 // **************************************************
-//using Microsoft.AspNetCore.Builder;
-//using Microsoft.Extensions.DependencyInjection;
-
 //var builder =
-//	Microsoft.AspNetCore.Builder
-//	.WebApplication.CreateBuilder(args);
+//	WebApplication.CreateBuilder(args);
 
-//// AddRazorPages() -> using Microsoft.Extensions.DependencyInjection;
 //builder.Services.AddRazorPages();
 
-//// **************************************************
+//// **********
 //builder.Services.AddSingleton
 //	<Infrastructure.Learn06.Interface1, Infrastructure.Learn06.Class1>();
 
 //builder.Services.AddSingleton
 //	<Infrastructure.Learn06.Interface2, Infrastructure.Learn06.Class2>();
-//// **************************************************
+//// **********
 
 //var app =
 //	builder.Build();
 
-//// MapRazorPages() -> using Microsoft.AspNetCore.Builder;
 //app.MapRazorPages();
 
 //app.Run();
@@ -258,21 +252,14 @@ app.Run();
 // **************************************************
 
 // **************************************************
-// **************************************************
-// **************************************************
 // Learn 07
 // **************************************************
-//using Microsoft.AspNetCore.Builder;
-//using Microsoft.Extensions.DependencyInjection;
-
 //var builder =
-//	Microsoft.AspNetCore.Builder
-//	.WebApplication.CreateBuilder(args);
+//	WebApplication.CreateBuilder(args);
 
-//// AddRazorPages() -> using Microsoft.Extensions.DependencyInjection;
 //builder.Services.AddRazorPages();
 
-//// **************************************************
+//// **********
 //builder.Services.AddSingleton
 //	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogToFile>();
 
@@ -281,12 +268,11 @@ app.Run();
 
 ////builder.Services.AddSingleton
 ////	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogToDatabase>();
-//// **************************************************
+//// **********
 
 //var app =
 //	builder.Build();
 
-//// MapRazorPages() -> using Microsoft.AspNetCore.Builder;
 //app.MapRazorPages();
 
 //app.Run();
