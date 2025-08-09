@@ -1,45 +1,38 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-
-// **************************************************
+﻿// **************************************************
 // Default
 // **************************************************
-var builder =
-	WebApplication.CreateBuilder(args: args);
+using Microsoft.AspNetCore.Builder;
 
-var app =
-	builder.Build();
+var builder = WebApplication.CreateBuilder(args: args);
+
+var app = builder.Build();
 
 app.MapGet(pattern: "/", handler: () => "Hello World!");
 
 app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 01
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args: args);
+//using Infrastructure.Learn01;
+//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Builder;
 
-//var app =
-//	builder.Build();
+//var builder = WebApplication.CreateBuilder(args: args);
+
+//var app = builder.Build();
 
 //// **********
 //// Compile Error!
 //// **********
-////var myClass2 =
-////	new Infrastructure.Learn01.Class2();
+////var myClass2 = new Class2();
 //// **********
 
 //// **********
-//var myClass1 =
-//	new Infrastructure.Learn01.Class1();
-
-//var myClass2 =
-//	new Infrastructure.Learn01.Class2(class1: myClass1);
+//var myClass1 = new Class1();
+//var myClass2 = new Class2(class1: myClass1);
 //// **********
 
 //app.Run(async context =>
@@ -49,44 +42,43 @@ app.Run();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 02
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args: args);
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
 
 //builder.Services.AddRazorPages();
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
 //app.MapRazorPages();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 03
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args: args);
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
 
 //builder.Services.AddRazorPages();
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
 //app.MapRazorPages();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 04
@@ -95,105 +87,108 @@ app.Run();
 // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
 // https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/dependency-injection
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args: args);
+//using Infrastructure.Learn04;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
 
 //builder.Services.AddRazorPages();
+
+//// **********
+//builder.Services.AddSingleton<Class1>();
+//// **********
+
+//// **********
+////builder.Services.AddSingleton<Class1>();
+////builder.Services.AddSingleton<Class2>();
+//// **********
 
 //// **********
 //// می‌شود Reset در صورتی که پروژه را متوقف کنیم و دوباره اجرا کنیم، همه چیز
 //// باشد Stateless ثبت می‌کنیم که Singleton معمولا کلاسی را
 //// **********
-//builder.Services.AddSingleton
-//	<Infrastructure.Learn04.Class1>();
-
-////builder.Services.AddScoped
-////	<Infrastructure.Learn04.Class1>();
-
-////builder.Services.AddTransient
-////	<Infrastructure.Learn04.Class1>();
+////builder.Services.AddSingleton<Class1>();
+////builder.Services.AddScoped<Class1>();
+////builder.Services.AddTransient<Class1>();
 //// **********
 
 //// **********
-////builder.Services.AddSingleton
-////	(serviceType: typeof(Infrastructure.Learn04.Class1));
-
-////builder.Services.AddScoped
-////	(serviceType: typeof(Infrastructure.Learn04.Class1));
-
-////builder.Services.AddTransient
-////	(serviceType: typeof(Infrastructure.Learn04.Class1));
+////builder.Services.AddSingleton(serviceType: typeof(Class1));
+////builder.Services.AddScoped(serviceType: typeof(Class1));
+////builder.Services.AddTransient(serviceType: typeof(Class1));
 //// **********
 
 //// **********
 //// روش ذیل، خصوصا در مواقعی بسیار حائز اهمیت است که
 //// نداشته باشد Default Constructor ،کلاس مربوطه
 //// **********
-////builder.Services.AddSingleton
-////	<Infrastructure.Learn04.Class2>();
+////builder.Services.AddSingleton<Class1>();
 
-////builder.Services.AddSingleton
-////	<Infrastructure.Learn04.Class2>(options =>
+////builder.Services.AddSingleton<Class1>(options =>
+////{
+////	var result = new Class1
 ////	{
-////		var myClass1 =
-////			new Infrastructure.Learn04.Class1
-////			{
-////				MyValue = 20,
-////			};
+////		MyValue = 20,
+////	};
 
-////		var result =
-////			new Infrastructure.Learn04.Class2(myClass1: myClass1);
+////	return result;
+////});
+//// **********
+
+//// **********
+////builder.Services.AddSingleton(typeof(Class1), options =>
+////	{
+////		var result = new Class1
+////		{
+////			MyValue = 20,
+////		};
 
 ////		return result;
 ////	});
 //// **********
 
 //// **********
-////builder.Services.AddSingleton
-////	(typeof(Infrastructure.Learn04.Class1), options =>
+////builder.Services.AddSingleton<Class1>(options =>
 ////	{
-////		var result =
-////			new Infrastructure.Learn04.Class1
-////			{
-////				MyValue = 20,
-////			};
+////		var result = new Class1
+////		{
+////			MyValue = 20,
+////		};
 
 ////		return result;
 ////	});
+
+////builder.Services.AddSingleton<Class2>();
 //// **********
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
 //app.MapRazorPages();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 05
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args: args);
+//using Infrastructure.Learn05;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
 
 //builder.Services.AddRazorPages();
 
 //// **********
-////builder.Services.AddSingleton
-////	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_1>();
-
-////builder.Services.AddSingleton
-////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_1));
+//builder.Services.AddSingleton<Interface1, Class1_1>();
+//builder.Services.AddSingleton(serviceType: typeof(Interface1), implementationType: typeof(Class1_1));
 //// **********
 
 //// **********
-//builder.Services.AddSingleton
-//	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_2>();
-
-////builder.Services.AddSingleton
-////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_2));
+////builder.Services.AddSingleton<Interface1, Class1_2>();
+////builder.Services.AddSingleton(serviceType: typeof(Interface1), implementationType: typeof(Class1_2));
 //// **********
 
 //// **********
@@ -212,22 +207,18 @@ app.Run();
 ////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_1));
 //// **************************************************
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
-//// MapRazorPages() -> using Microsoft.AspNetCore.Builder;
 //app.MapRazorPages();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 06
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args);
+//var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddRazorPages();
 
@@ -239,21 +230,18 @@ app.Run();
 //	<Infrastructure.Learn06.Interface2, Infrastructure.Learn06.Class2>();
 //// **********
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
 //app.MapRazorPages();
 
 //app.Run();
 // **************************************************
-// **************************************************
-// **************************************************
+
 
 // **************************************************
 // Learn 07
 // **************************************************
-//var builder =
-//	WebApplication.CreateBuilder(args);
+//var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddRazorPages();
 
@@ -268,12 +256,9 @@ app.Run();
 ////	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogToDatabase>();
 //// **********
 
-//var app =
-//	builder.Build();
+//var app = builder.Build();
 
 //app.MapRazorPages();
 
 //app.Run();
-// **************************************************
-// **************************************************
 // **************************************************

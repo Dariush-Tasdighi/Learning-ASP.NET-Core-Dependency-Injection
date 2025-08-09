@@ -1,3 +1,4 @@
+using Infrastructure.Learn03;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Server.Pages;
@@ -7,12 +8,12 @@ namespace Server.Pages;
 // **************************************************
 public class Learn03Model : PageModel
 {
-	public Learn03Model(Infrastructure.Learn03.Class1 class1) : base()
+	public Learn03Model(Class1 class1) : base()
 	{
 		MyClass1 = class1;
 	}
 
-	public Infrastructure.Learn03.Class1 MyClass1 { get; init; }
+	public Class1 MyClass1 { get; init; }
 
 	public void OnGet()
 	{
@@ -25,12 +26,12 @@ public class Learn03Model : PageModel
 // **************************************************
 //public class Learn03Model : PageModel
 //{
-//	public Learn03Model(Infrastructure.Learn03.Class1? class1) : base()
+//	public Learn03Model(Class1? class1) : base()
 //	{
 //		MyClass1 = class1;
 //	}
 
-//	public Infrastructure.Learn03.Class1? MyClass1 { get; init; }
+//	public Class1? MyClass1 { get; init; }
 
 //	public void OnGet()
 //	{
@@ -43,12 +44,12 @@ public class Learn03Model : PageModel
 // **************************************************
 //public class Learn03Model : PageModel
 //{
-//	public Learn03Model(Infrastructure.Learn03.Class1? class1 = null) : base()
+//	public Learn03Model(Class1? class1 = null) : base()
 //	{
 //		MyClass1 = class1;
 //	}
 
-//	public Infrastructure.Learn03.Class1? MyClass1 { get; init; }
+//	public Class1? MyClass1 { get; init; }
 
 //	public void OnGet()
 //	{
