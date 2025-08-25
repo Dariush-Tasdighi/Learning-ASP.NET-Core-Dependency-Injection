@@ -5,12 +5,12 @@ namespace Server.Pages;
 
 public class Learn07Model : PageModel
 {
-	public Learn07Model(ILog logger) : base()
+	public Learn07Model(ILogger logger) : base()
 	{
 		Logger = logger;
 	}
 
-	public ILog Logger { get; init; }
+	public ILogger Logger { get; init; }
 
 	public void OnGet()
 	{

@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Learn07;
 
-public class LogToDatabase : object, ILog
+public class LogToDatabase : object, ILogger
 {
 	public LogToDatabase() : base()
 	{

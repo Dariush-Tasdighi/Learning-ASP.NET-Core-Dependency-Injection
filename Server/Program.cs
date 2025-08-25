@@ -183,29 +183,15 @@ app.Run();
 
 //// **********
 //builder.Services.AddSingleton<Interface1, Class1_1>();
-//builder.Services.AddSingleton(serviceType: typeof(Interface1), implementationType: typeof(Class1_1));
+//////builder.Services.AddSingleton
+//////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_1));
 //// **********
 
 //// **********
 ////builder.Services.AddSingleton<Interface1, Class1_2>();
-////builder.Services.AddSingleton(serviceType: typeof(Interface1), implementationType: typeof(Class1_2));
+//////builder.Services.AddSingleton
+//////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_2));
 //// **********
-
-//// **********
-////builder.Services.AddScoped
-////	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_1>();
-
-////builder.Services.AddScoped
-////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_1));
-//// **********
-
-//// **************************************************
-////builder.Services.AddTransient
-////	<Infrastructure.Learn05.Interface1, Infrastructure.Learn05.Class1_1>();
-
-////builder.Services.AddTransient
-////	(typeof(Infrastructure.Learn05.Interface1), typeof(Infrastructure.Learn05.Class1_1));
-//// **************************************************
 
 //var app = builder.Build();
 
@@ -218,16 +204,17 @@ app.Run();
 // **************************************************
 // Learn 06
 // **************************************************
+//using Infrastructure.Learn06;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
 //var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddRazorPages();
 
 //// **********
-//builder.Services.AddSingleton
-//	<Infrastructure.Learn06.Interface1, Infrastructure.Learn06.Class1>();
-
-//builder.Services.AddSingleton
-//	<Infrastructure.Learn06.Interface2, Infrastructure.Learn06.Class2>();
+//builder.Services.AddSingleton<Interface1, Class1>();
+//builder.Services.AddSingleton<Interface2, Class2>();
 //// **********
 
 //var app = builder.Build();
@@ -241,19 +228,18 @@ app.Run();
 // **************************************************
 // Learn 07
 // **************************************************
+//using Infrastructure.Learn07;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
 //var builder = WebApplication.CreateBuilder(args);
 
 //builder.Services.AddRazorPages();
 
 //// **********
-//builder.Services.AddSingleton
-//	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogToFile>();
-
-////builder.Services.AddSingleton
-////	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogByEmail>();
-
-////builder.Services.AddSingleton
-////	<Infrastructure.Learn07.ILog, Infrastructure.Learn07.LogToDatabase>();
+//builder.Services.AddSingleton<ILogger, LogToFile>();
+////builder.Services.AddSingleton<ILogger, LogByEmail>();
+////builder.Services.AddSingleton<ILogger, LogToDatabase>();
 //// **********
 
 //var app = builder.Build();

@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Learn07;
 
-public class LogByEmail : object, ILog
+public class LogByEmail : object, ILogger
 {
 	public LogByEmail() : base()
 	{

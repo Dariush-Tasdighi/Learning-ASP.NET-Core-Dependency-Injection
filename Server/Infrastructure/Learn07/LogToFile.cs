@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Learn07;
 
-public class LogToFile : object, ILog
+public class LogToFile : object, ILogger
 {
 	public LogToFile() : base()
 	{

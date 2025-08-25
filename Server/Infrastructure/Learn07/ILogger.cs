@@ -1,6 +1,6 @@
 ﻿namespace Infrastructure.Learn07;
 
-public interface ILog
+public interface ILogger
 {
 	void Log(string message);
 }
