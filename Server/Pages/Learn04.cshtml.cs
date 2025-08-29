@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace Server.Pages;
 
 // **************************************************
+/// <summary>
+/// 04 / 01 - 04 / 02
+/// </summary>
 public class Learn04Model : PageModel
 {
 	public Learn04Model(Class1 class1) : base()
@@ -20,7 +23,11 @@ public class Learn04Model : PageModel
 }
 // **************************************************
 
+
 // **************************************************
+///// <summary>
+///// 04 / 02
+///// </summary>
 //public class Learn04Model : PageModel
 //{
 //	public Learn04Model(Class1 class1) : base()
@@ -28,6 +35,9 @@ public class Learn04Model : PageModel
 //		MyClass1 = class1;
 //	}
 
+//	/// <summary>
+//	/// Threadsafe
+//	/// </summary>
 //	private object theObject = new();
 //	public Class1 MyClass1 { get; init; }
 
@@ -36,6 +46,7 @@ public class Learn04Model : PageModel
 //		// نیست Threadsafe دستور ذیل
 //		//MyClass1.MyValue++;
 
+//		// Threadsafe
 //		lock (theObject)
 //		{
 //			MyClass1.MyValue++;
@@ -45,6 +56,9 @@ public class Learn04Model : PageModel
 // **************************************************
 
 // **************************************************
+///// <summary>
+///// 04 / 03
+///// </summary>
 //public class Learn04Model : PageModel
 //{
 //	public Learn04Model(Class2 myClass2) : base()

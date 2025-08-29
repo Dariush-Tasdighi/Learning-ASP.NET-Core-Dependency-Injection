@@ -1,7 +1,7 @@
 ﻿namespace Infrastructure.Learn04;
 
 /// <summary>
-/// Error! This class is not Stateless!
+/// Bad Practice! This class is not Stateless!
 /// </summary>
 public class Class1 : object
 {

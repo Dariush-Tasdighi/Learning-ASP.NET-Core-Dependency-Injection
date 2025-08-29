@@ -1,15 +1,15 @@
 ﻿// **************************************************
 // Default
 // **************************************************
-using Microsoft.AspNetCore.Builder;
+//using Microsoft.AspNetCore.Builder;
 
-var builder = WebApplication.CreateBuilder(args: args);
+//var builder = WebApplication.CreateBuilder(args: args);
 
-var app = builder.Build();
+//var app = builder.Build();
 
-app.MapGet(pattern: "/", handler: () => "Hello World!");
+//app.MapGet(pattern: "/", handler: () => "Hello World!");
 
-app.Run();
+//app.Run();
 // **************************************************
 
 
@@ -81,11 +81,35 @@ app.Run();
 
 
 // **************************************************
-// Learn 04
-// **************************************************
 // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/dependency-injection
 // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
 // https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/dependency-injection
+// **************************************************
+
+
+// **************************************************
+// Learn 04 / 01
+// **************************************************
+//using Infrastructure.Learn04;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
+
+//builder.Services.AddRazorPages();
+
+//builder.Services.AddSingleton<Class1>();
+
+//var app = builder.Build();
+
+//app.MapRazorPages();
+
+//app.Run();
+// **************************************************
+
+
+// **************************************************
+// Learn 04 / 02
 // **************************************************
 //using Infrastructure.Learn04;
 //using Microsoft.AspNetCore.Builder;
@@ -96,19 +120,12 @@ app.Run();
 //builder.Services.AddRazorPages();
 
 //// **********
-//builder.Services.AddSingleton<Class1>();
-//// **********
-
-//// **********
-////builder.Services.AddSingleton<Class1>();
-////builder.Services.AddSingleton<Class2>();
-//// **********
-
-//// **********
 //// می‌شود Reset در صورتی که پروژه را متوقف کنیم و دوباره اجرا کنیم، همه چیز
 //// باشد Stateless ثبت می‌کنیم که Singleton معمولا کلاسی را
 //// **********
-////builder.Services.AddSingleton<Class1>();
+//// دستورات ذیل، نسبت به دستورات مدل یا شکل بعدی، صرفا شیک‌تر می‌باشند
+//// **********
+//builder.Services.AddSingleton<Class1>();
 ////builder.Services.AddScoped<Class1>();
 ////builder.Services.AddTransient<Class1>();
 //// **********
@@ -119,48 +136,59 @@ app.Run();
 ////builder.Services.AddTransient(serviceType: typeof(Class1));
 //// **********
 
-//// **********
-//// روش ذیل، خصوصا در مواقعی بسیار حائز اهمیت است که
-//// نداشته باشد Default Constructor ،کلاس مربوطه
-//// **********
+//var app = builder.Build();
+
+//app.MapRazorPages();
+
+//app.Run();
+// **************************************************
+
+
+// **************************************************
+// Learn 04 / 03
+// **************************************************
+//using Infrastructure.Learn04;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
+
+//builder.Services.AddRazorPages();
+
+//builder.Services.AddSingleton<Class1>();
+//builder.Services.AddSingleton<Class2>();
+
+//var app = builder.Build();
+
+//app.MapRazorPages();
+
+//app.Run();
+// **************************************************
+
+
+// **************************************************
+// Learn 04 / 03
+// **************************************************
+//using Infrastructure.Learn04;
+//using Microsoft.AspNetCore.Builder;
+//using Microsoft.Extensions.DependencyInjection;
+
+//var builder = WebApplication.CreateBuilder(args: args);
+
+//builder.Services.AddRazorPages();
+
+//builder.Services.AddSingleton<Class2>();
+
 ////builder.Services.AddSingleton<Class1>();
+//builder.Services.AddSingleton<Class1>(options =>
+//{
+//	var result = new Class1
+//	{
+//		MyValue = 20,
+//	};
 
-////builder.Services.AddSingleton<Class1>(options =>
-////{
-////	var result = new Class1
-////	{
-////		MyValue = 20,
-////	};
-
-////	return result;
-////});
-//// **********
-
-//// **********
-////builder.Services.AddSingleton(typeof(Class1), options =>
-////	{
-////		var result = new Class1
-////		{
-////			MyValue = 20,
-////		};
-
-////		return result;
-////	});
-//// **********
-
-//// **********
-////builder.Services.AddSingleton<Class1>(options =>
-////	{
-////		var result = new Class1
-////		{
-////			MyValue = 20,
-////		};
-
-////		return result;
-////	});
-
-////builder.Services.AddSingleton<Class2>();
-//// **********
+//	return result;
+//});
 
 //var app = builder.Build();
 
@@ -182,15 +210,17 @@ app.Run();
 //builder.Services.AddRazorPages();
 
 //// **********
+//// دستورات ذیل، نسبت به دستورات مدل یا شکل بعدی، صرفا شیک‌تر می‌باشند
+//// **********
 //builder.Services.AddSingleton<Interface1, Class1_1>();
-//////builder.Services.AddSingleton
-//////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_1));
+////builder.Services.AddSingleton<Interface1, Class1_2>();
 //// **********
 
 //// **********
-////builder.Services.AddSingleton<Interface1, Class1_2>();
-//////builder.Services.AddSingleton
-//////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_2));
+////builder.Services.AddSingleton
+////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_1));
+////builder.Services.AddSingleton
+////	(serviceType: typeof(Interface1), implementationType: typeof(Class1_2));
 //// **********
 
 //var app = builder.Build();
@@ -212,10 +242,8 @@ app.Run();
 
 //builder.Services.AddRazorPages();
 
-//// **********
 //builder.Services.AddSingleton<Interface1, Class1>();
 //builder.Services.AddSingleton<Interface2, Class2>();
-//// **********
 
 //var app = builder.Build();
 
@@ -236,11 +264,9 @@ app.Run();
 
 //builder.Services.AddRazorPages();
 
-//// **********
 //builder.Services.AddSingleton<ILogger, LogToFile>();
 ////builder.Services.AddSingleton<ILogger, LogByEmail>();
 ////builder.Services.AddSingleton<ILogger, LogToDatabase>();
-//// **********
 
 //var app = builder.Build();
 
